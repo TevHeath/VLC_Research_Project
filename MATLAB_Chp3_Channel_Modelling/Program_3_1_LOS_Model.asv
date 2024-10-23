@@ -1,0 +1,17 @@
+%Gathered from Program 3.1 - LOS Channel Gain
+%Variables:
+theta = 70; % semi-angle at half power
+m = -log10(2)/log10(cosd(theta)); %Lambertian order of emission
+P_total = 20;
+Adet=1e-4; %detector physical area of a PD
+
+%% Optics parameters
+Ts = 1;
+index = 1.5;
+FOV = 60*pi/180;
+G_Con = (index^2)/sin(FOV); %gain in an optical concentrator
+
+%% Room Dimension
+lx = 5; ly = 5; lz = 3; %Room dimension in meter
+h = 2.15; %the distance berween the soruce and receiver plane
+Nx =1x*20; Ny = ly*20; %number of grid in the receiver plane
