@@ -78,10 +78,14 @@ for ii=1:Nx+1
 end
 
 %% Plot RMS delay spread
-surf(x,y, Drms); % 3D surface plot of RMS delay spread
+% surf(x,y, Drms); % 3D surface plot of RMS delay spread
+% meshc(x, y, Drms); % generates a 3D mesh plot with contours for the received power distribution
+mesh(x, y, Drms); % 3D mesh plot
+xlabel('X (m)');
+ylabel('Y (m)');
+zlabel('Received power (dBm)');
+axis([-lx/2 lx/2 -ly/2 ly/2 min(min(Drms)) max(max(Drms))]);
 
 % Optional: Uncomment to plot mean delay instead
 % surf(x,y,mean_delay);
-
 % Set plot axes limits
-axis([-lx/2 lx/2 -ly/2 ly/2 min(min(Drms)) max(max(Drms))]);
