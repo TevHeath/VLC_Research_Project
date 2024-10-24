@@ -13,8 +13,8 @@ FOV = 60*pi/180; % field of view of the receiver in radians
 G_Con = (index^2) / sin(FOV); % gain of the optical concentrator, depends on the refractive index and FOV
 
 %% Room Dimension:
-lx = 10; ly = 10; lz = 10; % room dimensions in meters (length, width, height)
-h = 5.15; % distance between the source and receiver plane (in meters)
+lx = 20; ly = 10; lz = 100; % room dimensions in meters (length, width, height)
+h = 10.15; % distance between the source and receiver plane (in meters)
 Nx = lx * 20; Ny = ly * 20; % number of grid points in the receiver plane for X and Y dimensions
 
 XT = 0; YT = 0; % coordinates of the transmitter (light source) at the center of the room
